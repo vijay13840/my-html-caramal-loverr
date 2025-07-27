@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>From your cutie HUBBYY😘</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Courier New', cursive;
+      text-align: center;
+      padding: 2rem;
+      color: #333;
+      overflow-x: hidden;
+      cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1069.cur'), auto;
+    }
+
+    .heading {
+      font-size: 2.8rem;
+      animation: loveFade 2s infinite alternate;
+      color: #d63384;
+    }
+
+    @keyframes loveFade {
+      0% { opacity: 0.2; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1.05); }
+    }
+
+    .photo {
+      margin: 2rem auto;
+      width: 560px;
+      border-radius: 1rem;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+      border: 6px solid #ffc0cb;
+    }
+
+    .caption {
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      color: #ff69b4;
+      font-weight: bold;
+      font-family: 'Lucida Handwriting', cursive;
+      text-shadow: 0 0 10px #ffb6c1;
+      animation: sparkle 1.2s infinite alternate;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .caption:hover {
+      transform: scale(1.05);
+      animation: sparkle 0.6s infinite alternate;
+    }
+
+    @keyframes sparkle {
+      0% {
+        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ffc0cb;
+      }
+      100% {
+        text-shadow: 0 0 15px #ff1493, 0 0 30px #ffb6c1;
+      }
+    }
+
+    /* Custom Audio Player */
+    .audio-container {
+      background-color: #f8c3dc;
+      border-radius: 30px;
+      padding: 1rem 2rem;
+      display: inline-block;
+      margin-top: 2rem;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .controls button {
+      background-color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #d63384;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover {
+      transform: scale(1.1);
+    }
+
+    .heart {
+      position: fixed;
+      top: 100%;
+      font-size: 24px;
+      color: #ff4d88;
+      animation: floatHearts 10s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heading">🕊️💐</div>
+
+  <!-- Image and Caption Container -->
+  <div>
+    <button onclick="prevSlide()">⬅️ Before</button>
+    <img id="mainImage" class="photo" src="IMG_20250726_003639.jpg" alt="Gorgeous Woman" />
+    <button onclick="nextSlide()">Next ➡️</button>
+  </div>
+
+  <div class="caption" id="caption">
+     <span>Myy Alagiyeee</span>🥰
+  </div>
+
+  <!-- 💗 Custom Audio Player -->
+  <div class="audio-container">
+    <audio id="loveAudio" src="song.mp3"></audio>
+    <div class="controls">
+      <button onclick="document.getElementById('loveAudio').currentTime = 0;">⏮️</button>
+      <button onclick="togglePlay()" id="playPause">▶️</button>
+      <button onclick="document.getElementById('loveAudio').currentTime += 10;">⏭️</button>
+    </div>
+  </div>
+
+  <!-- 💖 Floating Hearts Generator -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 4 + Math.random() * 6 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 300);
+
+    // Audio controls
+    const audio = document.getElementById('loveAudio');
+    const playPauseBtn = document.getElementById('playPause');
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.innerText = "⏸️";
+      } else {
+        audio.pause();
+        playPauseBtn.innerText = "▶️";
+      }
+    }
+
+    // Image & Caption Switcher
+    const slides = [
+      {
+        img: "IMG_20250726_003639.jpg",
+        caption: "<span>Myy Alagiyeee</span>🥰"
+      },
+      {
+        img: "image2.jpg",
+        caption: "💖✨<span>541 days and still you never fail to amzae me on...</span>"
+      },
+      {
+        img: "image3.jpg",
+        caption: "<span>Howww you are thee most ★ STUNNING ★ Drop-dead gorgeous person i have ever met in my whole 6,372 days i have lived  !!!</span>🥰"
+      },
+      {
+        img: "image4.jpg",
+        caption: "<span>Tell Me,can anyone in the world be  more beautiful than her ????huhhhhh??!!no one...not even close !!</span>😤"
+      },
+      {
+        img: "image5.jpg",
+        caption: "<span>you aree soo HOT and ATTRACTIVE...that i sometimes wanna become bad </span>🥺👉👈"
+      },
+      {
+        img: "image6.jpg",
+        caption: "<span>In every photo i see of you,I still wonder..how the hell did I pull such a gorgeous,♾️/10,best girl in the entire universe!!.</span>😭"
+      },
+      {
+        img: "image7.jpg",
+        caption: "<span>Will you...</span>"
+      },
+      {
+        img: "image8.jpg",
+        caption: "<span>Forever Be my.....</span>"
+      },
+      {
+        img: "image9.jpg",
+        caption: "<span>Pondatii so that we can producee cute babiesss likee theseeee???pleaseeeee🥺💓</span>"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const image = document.getElementById('mainImage');
+      const caption = document.getElementById('caption');
+      image.src = slides[index].img;
+      caption.innerHTML = slides[index].caption;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
